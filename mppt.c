@@ -26,11 +26,11 @@ void mppt(double* P_anterior, uint8_t* pwm_anterior, uint8_t VrefV, uint8_t Vref
         
         if (P>*P_anterior){
             if (*pwm_anterior<255){
-            *pwm_anterior+=1;
+            *pwm_anterior++;
             }
         } else if (P<*P_anterior){
             if (*pwm_anterior>0){
-            *pwm_anterior-=1;
+            *pwm_anterior--;
             }
         }
         
