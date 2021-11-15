@@ -6,10 +6,9 @@
 
 void config_mppt(void){
     TRISA|=0b00001111;
-    uint8_t pwm_val=0;
     config_analog(12);
     config_pwm();
-    PWM_escribir(pwm_val);
+    PWM_escribir(0);
 }
 
 void init_mppt(uint8_t valor0_pwm){
